@@ -6,9 +6,11 @@ class MovieSerializer(serializers.HyperlinkedModelSerializer):
     class Meta: 
         model = Movie
         fields = (
+            'imdb_id',
             'title', 
+            'year', 
+            'genres', 
+            'runtime_minutes',
             'average_rating',
             'num_votes',
-            'genres', 
-            'runtime_minutes'
         )
